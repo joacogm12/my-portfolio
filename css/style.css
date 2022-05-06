@@ -5,13 +5,22 @@ header {
     padding: 1%;
     background-color: darkslategray;
     color: rgb(217, 255, 0);
-    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 10%;
 }
 
 h1 {
     font-size: 200%;
     justify-content: left;
     font-family: Arial;
+}
+
+main {
+    position: relative;
+    top: 10%;
 }
 
 nav ul {
@@ -38,37 +47,51 @@ nav a:hover{
 .subtitle{
     display: flex;
     width: 100%;
-    background-image: url(fotos/foto.jpg);
-    height: 50px;
-    z-index: 1 !important;
+    background-image: url(../fotos/foto.jpg);
+    height: 130px;
 }
 
-div{
+.subtitle h2{
+    font-family: cursive;
+    font-size: 150%;
+    color: rgb(6, 84, 104);
+    font-weight: bold;
+    position: absolute;
+    background-color: #0dcec4;
+    padding: 7px;
+    top: 70px;
+    right: 30px;
+}
+
+.secciones  {
     display: flex;
     flex-wrap: nowrap;
+    margin-top: 20px;
 }
 
-p, .contenido{
-    display: inline-block;
-    margin: 5px 10px;
+.tituloC h2 {
+    color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.contenido{
-    margin-left: 200px;
-    border-right: solid black;
+.tituloC {
+    font-size: 225%;
+    width: 2300px;
     padding-right: 10px;
+    margin-top: 10px;
+    text-align: right;
+
 }
 
-footer ul{
-    display: flex;
-    flex-wrap: nowrap;
-    max-width: 800px;
-    margin:auto
+.contenido {
+    flex: 0 0 80%;
+    min-height: fit-content;
+    min-height: fit-content;
+    border-left-style: solid;
+    border-color: darkslategray;
+    padding: 1% 3% 2% 3%;
+    text-align: justify;
 }
 
-footer li{
-    width: 100;
-    display: inline-block;
-}
 
 
