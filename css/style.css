@@ -93,5 +93,54 @@ nav a:hover{
     text-align: justify;
 }
 
+.imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
 
+.imagenGrande{
+    width: 100%;
+}
 
+.imagenesChicas{
+    width: 50%;
+}
+
+.imagenes img{
+    width: 100%;
+}
+
+.imagenes li:nth-child(2n+0){
+    padding-right: 5px;
+}
+
+.imagenes li:nth-child(2n+3){
+    padding-left: 5px;
+}
+
+.imagenes li:nth-child(1n+2){
+    padding-top: 8px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.links li{
+    padding: 3% 0;
+}
+
+.links a{
+    text-decoration: none;
+    color: darkslategray;
+    border-style: solid;
+    border-color: darkslategray;
+    padding: 7px 10px;
+}
+
+.links a:hover{
+    color: rgb(217, 255, 0);
+    border-color: rgb(217, 255, 0);
+}
