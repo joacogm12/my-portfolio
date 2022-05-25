@@ -1,54 +1,100 @@
-header {
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-image: linear-gradient(darkslategray, rgb(47, 140, 140));
     background-color: darkslategray;
     color: rgb(217, 255, 0);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-    min-height: 10%;
+    align-items: center;
 }
 
+/*fixes the overlapping of the navbar when i click the links*/
+html {
+    scroll-padding-top: 130px;
+  }
+  
+/*moving title. this is not mine i got it from internet*/
+svg {
+    height: 80px;
+    font: 350% 'Montserrat';
+    letter-spacing: 3px;
+    min-width: 800px;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: rgb(217, 255, 0);
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+    stroke: #0dcec4;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+    stroke: rgb(217, 255, 0);
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+    stroke: white;
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+    stroke: rgb(10, 130, 160);
+    animation-delay: -5s;
+}
+
+.text-copy:nth-child(5){
+stroke: #0dcec4;    
+animation-delay: -6s;
+}
+
+@keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+}
+
+/*H1*/
 h1 {
     font-size: 200%;
     font-family: Arial;
 }
 
+/*main position lower so it doesn´t overlap with the heading*/
 main {
     position: relative;
-    top: 10%;
+    top: 80px;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    min-width: 500px;
-    list-style-type: none;
+p{
+    line-height:    150%;
 }
 
-nav a{
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(217, 255, 0);
-    border-style: solid;
-    padding: .3em .5em;
-    border-radius: 10px;
-}
-
-nav a:hover{
-    color: white;
-}
-
+/*subtitle container backround*/
 .subtitle{
     display: flex;
     width: 100%;
     background-image: url(../fotos/foto.jpg);
-    height: 130px;
+    height: 195px;
 }
 
+/*subtitle styles and position*/
 .subtitle h2{
     font-family: cursive;
     font-size: 150%;
@@ -57,21 +103,57 @@ nav a:hover{
     position: absolute;
     background-color: #0dcec4;
     padding: 7px;
-    top: 70px;
+    top: 125px;
     right: 30px;
 }
 
+.navContainer{
+    background-image: linear-gradient(rgb(47, 140, 140), rgb(47, 160, 160));
+    padding: 5px;
+    position: sticky;
+    top: 80px;
+}
+
+.navContainer nav{
+    max-width: 900;
+    margin: 0 auto;
+}
+
+/*nav layout*/
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 500px;
+    list-style-type: none;
+    padding: 0 7%;
+}
+
+/*a decoration*/
+nav a{
+    display: inline-block;
+    color: rgb(217, 255, 0);
+    font: 1.3em 'Montserrat';
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: white;
+}
+
+/*conteiners for the main information*/
 .secciones  {
     display: flex;
     flex-wrap: nowrap;
     margin-top: 20px;
 }
 
+/*h2 styling for every section*/
 .tituloC h2 {
     color: darkslategray;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*container for h2*/
 .tituloC {
     font-size: 225%;
     width: 35%;
@@ -80,6 +162,7 @@ nav a:hover{
     text-align: right;
 }
 
+/*container for the information*/
 .contenido {
     flex: 0 0 80%;
     min-height: fit-content;
@@ -90,16 +173,29 @@ nav a:hover{
     text-align: justify;
 }
 
+p{
+    text-align: center;
+}
+
+#aboutMe img{
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+}
+
+/*ul containing images of my projects*/
 .imagenes{
     display: flex;
     flex-wrap: wrap;
     max-width: 1400px;
 }
 
+/*big image*/
 .imagenGrande{
     width: 100%;
 }
 
+/*small images*/
 .imagenesChicas{
     width: 50%;
 }
@@ -108,6 +204,7 @@ nav a:hover{
     width: 100%;
 }
 
+/*padding for every image*/
 .imagenes li:nth-child(2n+0){
     padding-right: 5px;
 }
@@ -120,9 +217,11 @@ nav a:hover{
     padding-top: 8px;
 }
 
+/*ul with links to diferent pages*/
 .links{
     display: flex;
     justify-content: space-around;
+    margin: auto;
     width: 100%;
 }
 
@@ -130,6 +229,7 @@ nav a:hover{
     padding: 3% 0;
 }
 
+/*a decoration*/
 .links a{
     text-decoration: none;
     color: darkslategray;
@@ -143,27 +243,15 @@ nav a:hover{
     border-color: rgb(217, 255, 0);
 }
 
-button{
-    display: none;
-}
-
-@media screen and (max-width: 850px){
+@media screen and (max-width: 950px){
     header{
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
     }
 
-    nav{
-        display: flex;
-        justify-content: space-around;
-        padding-top: 10px;
-        width: 100%;
-    }
-
-    nav a{
-        font-size: .7em;
-    }
+}
+@media screen and (max-width: 850px){
 
     .secciones{
         display: inline-block;
@@ -180,7 +268,7 @@ button{
         text-decoration: underline rgb(6, 84, 104);
     }
 
-    br {
+    main br {
         display: none;
     }
 
@@ -208,6 +296,16 @@ button{
 }
 
 @media screen and (max-width: 650px){
+
+    .subtitle{
+        height: 130px;
+    }
+
+    .subtitle h2{
+        top: 70px;
+        right: 30px;
+    }
+
     body{
         font-size: .8em;
     }
@@ -229,13 +327,21 @@ button{
 
 @media screen and (max-width: 550px){
 
-
     .secciones{
         display: block;
         text-align: center;
     } 
     
-    nav{
+    .navContainer{
         display: none;
+    }
+}
+
+@media screen and (max-width: 470px){
+    header{
+        justify-content: center;
+    }
+    svg{
+        font-size: 2.5em;
     }
 }
