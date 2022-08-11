@@ -210,8 +210,7 @@ img {
     ;
 }
 
-/*---------------------------------------------------------*/
-
+/*carousel styles*/
 .carouselContainer {
     position: relative;
 }
@@ -308,8 +307,6 @@ img {
         opacity: 2
     }
 }
-
-/*---------------------------------------------------------*/
 
 .Containers {
     display: none;
