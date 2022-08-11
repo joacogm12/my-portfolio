@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <script src="main.js"></script>
 </head>
 
 <body>
@@ -48,7 +47,7 @@
                     <li><a href="#aboutMe">ABOUT ME</a></li>
                     <li><a href="#myWork">MY WORK</a></li>
                     <li><a href="#contactMe">CONTACT ME</a></li>
-                    <li><a class="resumen" href="">RESUME</a></li>
+                    <li><a class="resumen" target=“_blank” href="./assets/CV_Joaquin_Gomez.pdf">RESUME</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,8 +78,27 @@
             <article class="contenido">
                 <ul class="imagenes">
                     <li class="imagenGrande">
-                        <a target=“_blank” href="https://github.com/AngelMond/Crypto-Check"><img
-                                src="assets/images/Completed UI.jpg" alt=""></a>
+
+                        <div class="carouselContainer">
+                            <div id="numCarousel" class="MessageInfo"></div>
+
+                            <div class="Containers">
+                                <a target=“_blank” href="https://github.com/AngelMond/Crypto-Check"><img
+                                        src="assets/images/Completed UI.jpg" alt=""></a>
+                                <div class="Info">Crypto check</div>
+                            </div>
+
+                            <div class="Containers">
+                                <a target=“_blank” href="https://github.com/KuiiMaldonado/BCash"><img
+                                        src="assets/images/cash-boomerang_auto_x2.jpg" alt=""></a>
+                                <div class="Info">Cash boomerang</div>
+                            </div>
+
+                            <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+
+                        </div>
+
                     </li>
                     <li class="imagenesChicas"><a href="">
                         </a><img src="assets/images/fotobuscaminas.png" alt="">
@@ -121,5 +139,7 @@
 
     </main>
 </body>
+
+<script src="./index.js "></script>
 
 </html>
